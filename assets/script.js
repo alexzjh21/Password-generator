@@ -1,6 +1,10 @@
-// Assignment code here
-
 var chars = ["a", "b", "c", "d,", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+var charsCapital = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d,", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+var charsSpecial = ["a", "b", "c", "d,", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", ",", ".", "/", "?", "~"]
+
+var charsBoth = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d,", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", ",", ".", "/", "?", "~"]
 
 var generatePassword = function() {
   var minCharacter = parseInt(window.prompt("What is the MINIMUM number of characters needed for your password?"));
@@ -15,32 +19,32 @@ var generatePassword = function() {
   console.log(length)
   var generatedPassword = "";
 // capital only
-  if (((capital === yes) || (capital === YES)) && (special === no) || (special === no)) {
+  if (((capital === "yes") || (capital === "YES")) && (special === "no") || (special === "NO")) {
     for (i=length; i > 0; i--) {
-      var number = Math.floor(Math.random() * chars.length);
+      var number = Math.floor(Math.random() * charsCapital.length);
       console.log(number)
-      var character = chars[number]
+      var character = charsCapital[number]
       console.log(character)
       generatedPassword = generatedPassword + character
     }
   }
   // special only
-  else if (((capital === no) || (capital === NO)) && (special === yes) || (special === YES)) {
+  else if (((capital === "no") || (capital === "NO")) && (special === "yes") || (special === "YES")) {
     for (i=length; i > 0; i--) {
-      var number = Math.floor(Math.random() * chars.length);
+      var number = Math.floor(Math.random() * charsSpecial.length);
       console.log(number)
-      var character = chars[number]
+      var character = charsSpecial[number]
       console.log(character)
       generatedPassword = generatedPassword + character
     }
   }
 
   // both
-  else if (((capital === yes) || (capital === YES)) && (special === yes) || (special === YES)) {
+  else if (((capital === "yes") || (capital === "YES")) && (special === "yes") || (special === "YES")) {
     for (i=length; i > 0; i--) {
-      var number = Math.floor(Math.random() * chars.length);
+      var number = Math.floor(Math.random() * charsBoth.length);
       console.log(number)
-      var character = chars[number]
+      var character = charsBoth[number]
       console.log(character)
       generatedPassword = generatedPassword + character
     }
