@@ -4,7 +4,7 @@ Password Genrator helps the user generate a random password according to the use
 
 ## Usage
 
-**Answer a few prompted questions about the password.
+**-Answer a few prompted questions about the password.**
 
 *Examples*
 
@@ -12,7 +12,7 @@ Password Genrator helps the user generate a random password according to the use
 * Would you like to include capital letters?
 * Would you like to include speacial characters?
 
-**Then the password that mathches the requirement is generated and is ready to use.
+**Then the password that mathches the requirement is generated and is ready to use.**
 
 ## Built with:
 
